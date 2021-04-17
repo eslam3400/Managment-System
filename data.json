@@ -1,0 +1,17 @@
+{
+  "inventory": [
+    {
+      "id": null,
+      "name": null,
+      "description": null,
+      "category": null,
+      "company": null,
+      "parcode": null,
+      "buying_price": null,
+      "selling_price": null,
+      "taxes": null,
+      "amount": null,
+      "min_amount": null
+    }
+  ]
+}
