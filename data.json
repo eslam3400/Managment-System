@@ -6,12 +6,13 @@
       "description": null,
       "category": null,
       "company": null,
-      "parcode": null,
+      "barcode": null,
       "buying_price": null,
       "selling_price": null,
       "taxes": null,
       "amount": null,
-      "min_amount": null
+      "min_amount": null,
+      "provider":null
     }
   ]
 }
