@@ -23,9 +23,9 @@ app.use(express.urlencoded())
  */
 app.use(cookie("DevTik"))
 
-app.get('/', (req, res) => res.render('dashboard'))
-app.get('/login', Controller.Auth.loginPage)
-app.post('/login', Controller.Auth.login)
+app.get('/', Middleware.Authentication.auth, Middleware.Authorization.admin, Controller.Dashboard.dashboard)
+app.get('/login', Controller.Auth.loginPage) //done
+app.post('/login', Controller.Auth.login) //done
 app.get('/signup', Controller.Auth.signupPage)
 app.post('/signup', Controller.Auth.signup)
 
