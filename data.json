@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "id": null,
+      "fname": null,
+      "lname": null,
+      "email": null,
+      "password": null,
+      "role": null
+    }
+  ],
   "inventory": [
     {
       "id": null,
@@ -12,7 +22,7 @@
       "taxes": null,
       "amount": null,
       "min_amount": null,
-      "provider":null
+      "provider": null
     }
   ]
 }

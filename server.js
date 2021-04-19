@@ -23,7 +23,7 @@ app.use(express.urlencoded())
  */
 app.use(cookie("DevTik"))
 
-app.get('/', Middleware.Authentication.auth, Middleware.Authorization.admin, Controller.Dashboard.dashboard)
+app.get('/', Middleware.Authorization.admin, Controller.Dashboard.dashboard)
 app.get('/login', Controller.Auth.loginPage) //done
 app.post('/login', Controller.Auth.login) //done
 app.get('/signup', Controller.Auth.signupPage)
