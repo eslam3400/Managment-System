@@ -13,6 +13,10 @@ class Product {
   sell($productId, $amount) {
     get($productId, product => new Model("inventory").update({ amount: product.amount - $amount }, `id = ${$productId}`))
   }
+
+  update($productId, $product) {
+    new Model("inventory").update($product, `id = ${$productId}`)
+  }
 }
 
 module.exports = Product
