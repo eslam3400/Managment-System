@@ -23,4 +23,4 @@ let getProduct = (req, res) => new Inventory().getProduct(req.body.id, product =
 
 let getProducts = (req, res) => new Inventory().getProducts(products => res.render("inventory", { products }))
 
-module.exports = { Inventory, addProduct, getProduct, getProducts }
+module.exports = { Inventory, addProduct, getProduct, getProducts, addProductPage }

@@ -28,6 +28,6 @@ app.get('/login', Controller.Auth.loginPage) //done
 app.post('/login', Controller.Auth.login) //done
 app.get('/signup', Controller.Auth.signupPage)
 app.post('/signup', Controller.Auth.signup)
-app.get('/product/add', Controller.Inventory.addProduct)
+app.get('/product/add', Controller.Inventory.addProductPage)
 
 app.listen(process.env.PORT || port, () => console.log(`app listening at http://localhost:${port}`))
