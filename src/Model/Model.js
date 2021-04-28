@@ -18,13 +18,14 @@ class Model {
   get(options = { limit: null, where: null, order: null }, callBack = data => { }) {
     let { limit, where, order } = options
 
-    this.connection.connect(connectionErr => {
-      if (connectionErr) throw connectionErr;
-      this.connection.query(`SELECT * FROM ${this.tabelName}`, (queryErr, result) => {
-        if (queryErr) throw queryErr;
-        callBack(result)
+    if (options == null)
+      this.connection.connect(connectionErr => {
+        if (connectionErr) throw connectionErr;
+        this.connection.query(`SELECT * FROM ${this.tabelName}`, (queryErr, result) => {
+          if (queryErr) throw queryErr;
+          callBack(result)
+        });
       });
-    });
     if (limit == null && where == null && order == null)
       this.connection.connect(connectionErr => {
         if (connectionErr) throw connectionErr;
@@ -151,5 +152,14 @@ class Model {
 // }, "id = 0")
 
 // new Model('users').get({ where: "req.cookies.token" }, data => console.log(data[0].id))
+
+// new Model("users").add({
+//   fname: "mohamed",
+//   lname: "hashad",
+//   email: "mohamed@gmail.com",
+//   password: "asd"
+// })
+
+// new Model("users").get({ limit: 2 }, data => console.log(data))
 
 module.exports = Model;
